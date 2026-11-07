@@ -138,15 +138,31 @@
   flex-direction: column;
 }
 
+.task-10 h2{
+  text-align: center;
+} 
+
+.men {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
 .image img{
   width: 100%;
   height: auto;
   display: block;
 }
 
-.exercise item {
+.exercise{
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.exercise .item{
+  text-align: center;
 }
 
 @media screen and (min-width: 640px){
@@ -156,13 +172,30 @@
     gap: 1.5rem;
     width: 40%;
   }
+
+  .image {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .image img{
+    width: 40%;
+    height: auto;
+    display: block;
+  }
+
 }
 
 @media screen and (min-width: 900px){
+  .task-10{
+    width: 95%;
+    max-width: 900px;
+  }
+
   .exercise {
     flex-direction: row;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 40%;
   }
 }
