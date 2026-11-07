@@ -1,0 +1,168 @@
+/*
+  Пишите свои стили ниже. Сохраняйте файл и обновляйте страницу.
+  Начинайте каждый селектор с класса задания, например .task-01 .meter.
+  Внутри @media тоже указывайте класс задания.
+*/
+
+/* 01. Полоска в половину контейнера */
+.track {
+    .meter {
+    width: 50%;
+  }
+  }
+  
+
+/* 02. Карточка с полями */
+.note {
+    width: 90%;
+    max-width: 420px;
+    display: flex;                  
+    justify-content: center;
+  }
+.lab-stage .task-02 {
+  display: flex;                  
+  justify-content: space-between;
+}
+
+/* 03. Баннер, который растёт вместе с окном */
+@media screen {
+  .banner {
+    min-height: 25vh;
+  }
+}
+
+/* 04. Заголовок в двух размерах */
+.headline {
+  font-size: 24px;
+}
+@media screen and (min-width: 600px){
+  .headline {
+    font-size: 40px;
+  }
+}
+
+/* 05. Из колонки в ряд */
+.actions {
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 640px){
+  .actions {
+    flex-direction: row;
+  }
+}
+
+/* 06. Меню из трёх ссылок */
+.menu {
+  gap: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 600px){
+  .menu {
+    flex-direction: row;
+  }
+}
+
+/* 07. Каталог на одну, две и три колонки */
+.catalog {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.item {
+  display: flex;                  
+  justify-content: center;   
+  align-items: center;
+  background-color: antiquewhite;
+  font-size: 16px;
+}
+@media screen and (min-width: 600px){
+  .catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 900px){
+  .catalog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 08. Фото с подписью */
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo figcaption {
+    display: none;
+  }
+
+@media screen and (min-width: 700px){
+  .photo {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .photo img {
+    width: 55%;
+  }
+
+  .photo figcaption {
+    display: block;
+  }
+}
+
+/* 09. Первый экран с гибкой типографикой */
+.hero {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h3 {
+  font-size: clamp(24px, 6vw, 56px);
+  margin: 0 0 0.5rem 0;
+}
+
+/* 10. Мини-страница мастерской */
+.task-10 {
+  display: flex;
+  flex-direction: column;
+}
+
+.image img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.exercise item {
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 640px){
+  .men {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .exercise {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 40%;
+  }
+}
